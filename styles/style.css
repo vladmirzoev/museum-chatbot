@@ -8,15 +8,15 @@
     --light-grey-color: #F4F5F9;
     --text-color:var(--dark-color);
     /* Text style*/
-    --heading-text: 'Sans-Serif';
-    --main-text: 'Sans-Serif';
-    --description-text: 'Sans-Serif';
+    --heading-text:'Inter', sans-serif;
+    --main-text: 'Inter', sans-serif;
+    --description-text: 'Inter', sans-serif;
     /* Text size */
-    --heading-ultra-size: 270px;
-    --heading-super-size: 140px;
-    --heading-three-size: 44px;
-    --heading-two-size: 64px;
-    --heading-four-size: 32px;
+    --heading-one-size: 52px;
+    --heading-two-size: 33px;
+    --heading-three-size: 20px;
+    --heading-four-size: 17px;
+
     --navigation-size: 20px;
     --mobile-navigation-size: 24px;
     --description-size: 22px;
@@ -30,6 +30,7 @@
 }
 /* Overall tags */
 body{
+    all: unset;
     background: var(--background-color);
     color: var(--text-color);
     scroll-behavior: smooth;
@@ -37,27 +38,74 @@ body{
 
 h1{
     font-family: var(--heading-text);
-    font-size: var(--heading-card-size);
+    font-size: var(--heading-one-size);
     color: var(--dark-color);
+    font-weight: 900;
+    letter-spacing: -1.04px;
 }
 
 h2{
     font-family: var(--heading-text);
     font-size: var(--heading-two-size);
     color: var(--dark-color);
+    font-weight: 900;
+    letter-spacing: -1.04px;
 }
 
 h3{
     font-family: var(--heading-text);
     font-size: var(--heading-three-size);
     color: var(--dark-color);
+    font-weight: 900;
+    letter-spacing: -1.04px;
 }
 
 a{
     all: unset;
     font-family: var(--description-text);
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--text-color);
     cursor: pointer;
-    font-size: var(--navigation-size);
+    font-size: var(--heading-two-size);
+    font-weight: 400;
+    letter-spacing: -1.04px;
+}
+
+.container{
+    margin: 30px;
+}
+
+.wrapper{
+    margin-top: 30px;
+}
+
+/* MENU */
+
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+.menu-item{
+    margin-top: 64px;
+}
+
+#chatbot-item{
+    position: relative;
+}
+
+#chatbot-item::after{
+    content: "new!";
+    color: var(--blue-color);
+    font-family: var(--description-text);
+    font-weight: bold;
+    font-size: var(--heading-three-size);
+    position: absolute;
+    bottom: 70%;
+    right: -45px;
+}
+
+.bottom-image{
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
 }

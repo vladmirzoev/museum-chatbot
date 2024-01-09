@@ -1,0 +1,10 @@
+body{
+    all: unset;
+    background: var(--blue-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+header{
+    height: 170px;
+}
